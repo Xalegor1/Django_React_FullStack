@@ -1,0 +1,70 @@
+.notes-container {
+  display: inline-table;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
+  gap: 20px; /* Промежуток между карточками */
+  padding: 20px;
+}
+
+.note-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 210px; 
+  width: 210px;
+  padding: 20px;
+  margin: 0; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.note-container:hover {
+  transform: scale(1.02);
+}
+
+.note-title {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ddd; /* Горизонтальная линия */
+  margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.note-content {
+  color: #666;
+  margin-bottom: 10px;
+  flex-grow: 1; /* Заполнение оставшегося пространства */
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between; /* Пространство между датой и кнопкой */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  margin-top: auto; /* Автоматический отступ сверху для смещения footer вниз */
+}
+
+.note-date {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
